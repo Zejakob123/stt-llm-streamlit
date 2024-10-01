@@ -31,7 +31,7 @@ def main():
             if st.sidebar.button("Transcribe Audio"):
                 st.sidebar.success("Transcribing Audio")
                 # Transcribe using Whisper model with the temp file path
-                transcription = model.transcribe(temp_file_path)
+                transcription = model.transcribe(temp_file_path, language="en")
                 st.sidebar.success("Transcription Complete")
                 st.markdown(transcription['text'])
         else:
